@@ -1,39 +1,62 @@
-function getTemplateAjax(path){
-	var source;
-	var template;
-	var result;
+var contactRequestUrl = "http://some/server/api/call";
+var contacts = [];
 
+var dummyContacts = [
+	{name:"bob", content: "i like turtles"},
+	{name:"joe", content: "glue is tasty"},
+	{name:"mila", content: "look a chair"},
+	{name:"enrico", content: "wow am i cool or what"}
+]
+
+var contactTemplate;
+
+function loadContactsFromDatabase(){
+	$.getJSON(contactRequestUrl, {
+		format: "json"
+	}).done(function(data) {
+		$.each(data.items, function(num, contact) {
+			contacts.push(item);
+		});
+	});
+}
+
+function generateContactHtml(){
+	var path = '../../templates/contact.html';
+	for(var i = 0; i < dummyContacts.count; i++){
+		console.log(dummyContacts[i]);
+		makeTemplate(path, dummyContacts[i]);
+	}
+}
+
+function makeTemplate(path, context){
+	console.log(context);
 	$.ajax({
 		url: path,
 		cache: true,
-		success: function(data){
-			//console.log('data: ' + data);
-
-			source = data;
-			result = Handlebars.compile(source);
-		}
+	}).done(function(response){
+		contactTemplate = templateCallback(response, context);
+		$(".groupmemberContainer").append(contactTemplate);
 	});
-	console.log(result);
-	return result;
 }
 
+function templateCallback(data, context){
+	var result = Handlebars.compile(data);
+	//$(".groupmemberContainer").html(result);
+	//$(".groupmemberContainer").html(contactTemplate);
+	return result(context);
+}
 
 $(document).ready( function() { 
-
-	//var source = tempvar;
-	//var template = Handlebars.compile(source);
-	//var template = getTemplateAjax('../templates/contact.html');
-	var tmpl = getTemplateAjax('../../templates/contact.html');
-	console.log(tmpl);
-
 	var context = {
 		name: "bob",
 		content: "hello this is content"
 	};
+	var templatePath = '../../templates/contact.html';
+	makeTemplate(templatePath, context);
 
-	var html = tmpl(context);
+	//var testTemplate = Handlebars.compile(contact_template);
+	//console.log(testTemplate(context));
 
-	//template1 = getTemplateAjax('../../templates/contact.handlebars');
-	
-	$(".groupmemberContainer").text(html);
+	//$(".groupmemberContainer").text(templateHtml);
+	generateContactHtml();
 });
