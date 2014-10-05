@@ -1,0 +1,21 @@
+#header {
+    background-color:#33ccff;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+#page {
+    background-color:#eeeeee;
+    color:black;
+    text-align:center;
+    padding:5px;
+}
+
+#footer {
+    background-color:#33ccff;
+    color:black;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
