@@ -7,7 +7,6 @@ html, body {
 	margin: 0;
 }
 
-
 .header  {
 	background-color: black;
 	position: relative;
@@ -16,17 +15,17 @@ html, body {
 }
 
 #groupMembers {
-	display: block;
+	display: inline-block;
 
 	width: 40%;
 	min-height: 100%;
 	float: left;
 	
-	background-color: green;
+	background-color: #66CC66;
 }
 
 #groupInfo {
-	display: block;
+	display: inline-block;
 	float: right;
 
 	width: 60%;
@@ -35,15 +34,71 @@ html, body {
 	right: 100%;
 	
 	vertical-align: top;
-	background-color: orange;
 }
 
 #groupNewsfeed {
-	display: block;
+	display: inline-block;
 
 	width:60%;
 	height:50%;
 	float: right;
 	vertical-align: bottom;
 	background-color: gray;
+}
+
+#editInfoButton{
+	margin: 5px;
+	border: black solid 1px;
+	border-radius: 5px;
+	background-color: green;
+	width: 100px;
+	text-align: center;
+}
+
+#editInfoButton:hover{
+	border: black solid 1px;
+	border-radius: 5px;
+	background-color: #33FF66;
+	width: 100px;
+	text-align: center;
+}
+
+.groupinfoContainer{
+	padding-left: 10px;
+	background-color: white;
+	height: 100%;
+}
+
+.groupdetails{
+	width: 90%;
+	padding-left: 10px;
+	border: black solid 10px;
+	border-radius: 10px;
+}
+
+.groupmemberContainer{
+	padding-left: 10px;
+}
+
+.contactDetails{
+	margin-left: 25%;
+	width: 60%;
+	background-color: white;
+	border-radius: 50px;
+	text-align: center;
+}
+
+.contactPicture{
+	display: block;
+	float:left;
+	background-color: white;
+	border-radius: 50px;
+	width:75px;
+	height: 75px;
+	vertical-align: center;
+	text-align: center;
+}
+
+.hidden{
+	display: none;
 }
