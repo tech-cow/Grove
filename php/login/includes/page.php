@@ -2,7 +2,7 @@
 
 		<p>
 		<a href="Simon.html">
-		<img src="https://trello-attachments.s3.amazonaws.com/542310f82f4a376adcae83bd/630x914/e21f3c3f7090e02dd216119ea00b3640/Capture.PNG" alt="Grove" align="middle"style="width:200px;height:300px">
+		<img src="/Users/Yui/Desktop/Team_COOLGUYS-master/php/login/logo.png" alt="Grove" align="middle"style="width:200px;height:300px">
 		</a>
 		</p>
 
