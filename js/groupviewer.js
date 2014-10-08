@@ -17,11 +17,14 @@ function Group(contacts, info){
 //in a different context
 // </words>
 
+//should evaluate potential security risks
+//in passing ID like this, being accessible and all that.
+//i predict there will be no trouble, but not sure.
 var dummyContacts = [
-	{name:"bob", content: "i like turtles"},
-	{name:"joe", content: "glue is tasty"},
-	{name:"mila", content: "look a chair"},
-	{name:"enrico", content: "wow am i cool or what"}
+	{id: 0, name:"bob", content: "i like turtles"},
+	{id: 1, name:"joe", content: "glue is tasty"},
+	{id: 2, name:"mila", content: "look a chair"},
+	{id: 3, name:"enrico", content: "wow am i cool or what"}
 ]
 
 var dummyInfo = {
@@ -116,6 +119,11 @@ function toggleVisible(elem){
 
 function editGroupInfo(){
 	toggleVisible("#groupdetails");
+	toggleVisible("#editgroup");
+}
+
+function viewContact(contact_id){
+	console.log("viewing contact "+contact_id);
 }
 
 $(document).ready( function() { 

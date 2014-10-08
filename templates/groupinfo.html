@@ -5,15 +5,18 @@
 		<p>Time: {{meetingTime}}</p>
 		<p>Location: {{meetingLoc}}</p>
 	</div>
+	
+	<form method="post">
+		<div id="editgroup" class="hidden">
+			<p>Description: <textarea>{{description}}</textarea></p>
+			<p>Time: <textarea>{{meetingTime}}</textarea></p>
+			<p>Location: <textarea>{{meetingLoc}}</textarea></p>
+			<input type="submit" value="Save Changes">
+		</div>
+	</form>
+
 	<div id="editInfoButton" onclick="editGroupInfo()">
 		Edit Info
 	</div>
-
-	<div id="editgroup" class="hidden">
-		<p></p>
-		<p></p>
-		<p></p>
-	</div>
-
 </div>
 
