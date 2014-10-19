@@ -108,7 +108,7 @@ function loadGroup(){
 function toggleVisible(elem){
 	var elemClass = $(elem).attr('class');
 	
-	if(elemClass.contains('hidden')){
+	if(elemClass.indexOf('hidden') != -1){
 		var newclass = elemClass.replace('hidden','');
 		$(elem).attr('class',newclass);
 	} else {
