@@ -1,13 +1,15 @@
-<?php include '../../php/login/includes/overall/header.php'?>
+<?php 
+
+include 'core/init.php';
+
+include 'includes/overall/header.php';
 	
-<body>
+include'includes/header.php';
 
-	<?php include'../../php/login/includes/header.php' ?>
+include'includes/page.php';
 
-	<?php include'../../php/login/includes/page.php' ?>
+include'includes/footer.php';
 
-	<?php include'../../php/login/includes/footer.php' ?>
+?>
 
-</body>
-
-<?php include '../../php/login/includes/overall/footer.php'?>
+<?php include 'includes/overall/footer.php'; ?>

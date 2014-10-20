@@ -1,24 +1,32 @@
 <div id="page">
 
-		<p>
-		<a href="Simon.html">
-		<img src="/Users/Yui/Desktop/Team_COOLGUYS-master/php/login/logo.png" alt="Grove" align="middle"style="width:200px;height:300px">
-		</a>
-		</p>
+	<img src="http://s27.postimg.org/k8ykb37hf/logo_name.png" alt="Grove" align="middle"style="width:250px;height:100px">
 
-		<p><input type="text" name="login" value="" placeholder="Username"></p>
+	<div class="login">
+		<form action = "login.php" method="post">
+			<ul id= "login">
+				<p>
+					Username:<br>
+					<input type "text" name="username"
+				</p>
+				<p>
+					Password:<br>
+					<input type "password" name="password">
+				</p>
+				<p>
+					<input type="submit" value = "Log in">
+				</p>
+				<p>
+				<a href="register.php">Register</a>
+				</p>
 
-		<p><input type="text" name="password" value="" placeholder="Password"></p>
-	
-		<p><input type="checkbox" name="remember_me" id="remember_me"> Remember me on this computer</p>
-    	
-    	<p class="submit">
-    		<input type="submit" name="commit" value="Login">
-    		<input type="submit" name="commit" value="Signup">
-    	</p>
+			</ul>
+		</form>
+	</div>
 
-    	<p><div class="login-help">
+
+    	<div class="login-help">
     		<p>Forgot your password? <a href="cp.html">Click here to reset it</a>.</p>
-    	</div></p>
+    	</div>
 
 </div>

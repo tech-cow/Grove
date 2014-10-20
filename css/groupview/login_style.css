@@ -1,7 +1,7 @@
 #header {
     background-color:#33ccff;
     color:white;
-    text-align:center;
+    <!--text-align:center;-->
     padding:5px;
 }
 
@@ -9,7 +9,7 @@
     background-color:#eeeeee;
     color:black;
     text-align:center;
-    padding:5px;
+    padding:150px;
 }
 
 #footer {
