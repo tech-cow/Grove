@@ -9,9 +9,10 @@ html, body {
 
 .header  {
 	background-color: black;
-	position: relative;
 	color: white;
-	border-radius: 50px;
+	/*border-radius: 50px;*/
+    height: 60px;
+    width: 100%;
 }
 
 #groupMembers {
@@ -53,6 +54,9 @@ html, body {
 	background-color: green;
 	width: 100px;
 	text-align: center;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
 }
 
 #editInfoButton:hover{
@@ -61,12 +65,31 @@ html, body {
 	background-color: #33FF66;
 	width: 100px;
 	text-align: center;
+    
+}
+
+.button{
+    width: 150px;
+    height: 100%;
+    background-color: green;
+    text-align: center;
+    display: inline-block;
+}
+
+.button:hover{
+    width: 150px;
+    height: 100%;
+	background-color: #33FF66;
+}
+
+#saveChangesButton{
+    display:flex;
 }
 
 .groupinfoContainer{
 	padding-left: 10px;
 	background-color: white;
-	height: 100%;
+    font-size: 20px;
 }
 
 .groupdetails{
@@ -101,4 +124,22 @@ html, body {
 
 .hidden{
 	display: none;
+}
+
+.edittext{
+    resize: none;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+
+.editgroup_description{
+
+
+}
+
+.editgroup_time{
+}
+
+.editgroup_location{
 }
