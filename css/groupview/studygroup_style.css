@@ -8,10 +8,10 @@ html, body {
 }
 
 .header  {
-	background-color: black;
+	background-color: #33ccff;
 	color: white;
 	/*border-radius: 50px;*/
-    height: 60px;
+    height: 65px;
     width: 100%;
 }
 
@@ -65,20 +65,23 @@ html, body {
 	background-color: #33FF66;
 	width: 100px;
 	text-align: center;
-    
+    	
 }
 
 .button{
-    width: 150px;
-    height: 100%;
-    background-color: green;
+    width: 100px;
+    height: 70%;
+    background: transparent;
     text-align: center;
     display: inline-block;
+    margin: 5px;
+    /*border: white solid 1px;*/
+    border-radius: 10px;
 }
 
 .button:hover{
-    width: 150px;
-    height: 100%;
+    width: 100px;
+    height: 50%;
 	background-color: #33FF66;
 }
 

@@ -11,7 +11,7 @@
 				</p>
 				<p>
 					Password:<br>
-					<input type "password" name="password">
+					<input type ="password" name="password">
 				</p>
 				<p>
 					<input type="submit" value = "Log in">
