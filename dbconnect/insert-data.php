@@ -45,3 +45,8 @@ if (isset($_POST['submitted'])) {
 </body>
 
 </html>
+
+<! This should insert some data into our db.  Assuming the table named "people" has been created in the db, this will
+allow a user to add a first name and last name into that table, which will both be stored in seperate columns. So,
+when we have a finalized "Sign up" page, for example, that page should probably have a script looking a lot like this,
+where stuff entered in the form fields gets pushed to the db. >
