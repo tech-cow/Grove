@@ -38,3 +38,7 @@ echo "</table>";
 </body>
 
 </html>
+
+<! This page displays information stored in our db on the page in a table.  A chunk of php like this will probably be used most
+frequently throughout the app, as it is what lets us display all of the personal account info, etc. to the user.  This particular
+page is taking all contents from that table called "people" and pushing them to the table on the page. >
