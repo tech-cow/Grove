@@ -14,3 +14,7 @@ if (!$dbcon) {
 echo('Success! You are now connected to the database.')
 
 ?>
+
+<! This should get our connection to the db started, and print a message telling us whether that connection was successful
+or not.  I believe all that needs to change here is 'localhost' on line 5.  That should instead point to wherever the
+db is stored. >
