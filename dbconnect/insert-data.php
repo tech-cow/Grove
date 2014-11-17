@@ -15,10 +15,10 @@ if (isset($_POST['submitted'])) {
 	include('connect-mysql.php');
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
-	$sqlinsert = "INSERT INTO people (firstname, lastname) VALUES ('$fname', '$lname')";
+	$sqlinsert = "INSERT INTO users (name_first, name_last) VALUES ('$fname', '$lname')";
 
 	if (!mysqli_query($dbcon, $sqlinsert)) {
-		die('Error inserting new data, please try again.')
+		die('Error inserting new data, please try again.');
 	}
 
 	$confirm = '1 new record successfully added to database.';
@@ -38,7 +38,11 @@ if (isset($_POST['submitted'])) {
 	<input type="submit" value="add person" />
 	</form>
 	<?php
-	echo $confirm;
+	
+	if($confirm){
+		echo $confirm;
+	}
+	//echo $confirm;
 	?>
 
 
@@ -46,7 +50,7 @@ if (isset($_POST['submitted'])) {
 
 </html>
 
-<! This should insert some data into our db.  Assuming the table named "people" has been created in the db, this will
+<!-- This should insert some data into our db.  Assuming the table named "people" has been created in the db, this will
 allow a user to add a first name and last name into that table, which will both be stored in seperate columns. So,
 when we have a finalized "Sign up" page, for example, that page should probably have a script looking a lot like this,
-where stuff entered in the form fields gets pushed to the db. >
+where stuff entered in the form fields gets pushed to the db. -->
