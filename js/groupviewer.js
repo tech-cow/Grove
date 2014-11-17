@@ -1,4 +1,6 @@
 var contactRequestUrl = "http://some/server/api/call"; //should point to our API or database or whatever
+var templatePath = "../../templates/";
+
 var contacts = []; 
 var group;
 var info;
@@ -66,7 +68,7 @@ function fetchGroup(){
 */
 
 function generateGroupInfoHtml(){
-	var path = "../../templates/groupinfo.html";
+	var path = templatePath + "groupinfo_test.html";
 	makeTemplate(path, dummyInfo, groupinfoTemplateCallback);
 }
 
@@ -76,7 +78,7 @@ function groupinfoTemplateCallback(data, context){
 }
 
 function generateContactHtml(){
-	var path = '../../templates/contact.html';
+	var path = templatePath + 'contact.html';
 
 	for(var i = 0; i < dummyContacts.length; i++){
 		console.log("Generating html for contact");

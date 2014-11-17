@@ -1,4 +1,5 @@
 <!doctype html>
+<!--
 <html>
 
 <head>
@@ -7,15 +8,18 @@
 </head>
 
 <body>
-
+-->
 <?php
+$dbconnect_path = "../dbconnect/";
+
 
 if (isset($_POST['submitted'])) {
 
-	include('connect-mysql.php');
-	$fname = $_POST['fname'];
-	$lname = $_POST['lname'];
-	$sqlinsert = "INSERT INTO users (name_first, name_last) VALUES ('$fname', '$lname')";
+	include($dbconnect_path + 'connect-mysql.php');
+	$desc = $_POST['group_description'];
+	$meeting_time = $_POST['group_time'];
+	$meeting_loc = $_POST['group_loc'];
+	$sqlinsert = "INSERT INTO groups (description, meeting_time, meeting_location) VALUES ('$desc', '$meeting_time', '$meeting_loc')";
 
 	if (!mysqli_query($dbcon, $sqlinsert)) {
 		die('Error inserting new data, please try again.');
@@ -26,7 +30,7 @@ if (isset($_POST['submitted'])) {
 
 ?>
 
-
+<!--
 	<h1>Insert Data into the Database</h1>
 
 	<form method="post" action="insert-data.html">
@@ -39,8 +43,8 @@ if (isset($_POST['submitted'])) {
 	</form>
 	<?php
 	
-	if($confirm){
-		echo $confirm;
+	//if($confirm){
+	//	echo $confirm;
 	}
 	//echo $confirm;
 	?>
@@ -49,6 +53,8 @@ if (isset($_POST['submitted'])) {
 </body>
 
 </html>
+-->
+
 
 <!-- This should insert some data into our db.  Assuming the table named "people" has been created in the db, this will
 allow a user to add a first name and last name into that table, which will both be stored in seperate columns. So,

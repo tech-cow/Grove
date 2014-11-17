@@ -1,0 +1,32 @@
+<div>
+	<h1>{{name}}</h1>
+	<div id="groupdetails" class="">
+		<p>{{description}}</p>
+		<p>Time: {{meetingTime}}</p>
+		<p>Location: {{meetingLoc}}</p>
+	</div>
+
+	<form method="post" action="../../dbconnect/insert-data2_group.php">
+		<div id="editgroup" class="hidden">
+			<div class="editgroup_description">
+                <p>Description: </p>
+                <textarea class="edittext" name="group_description">{{description}}</textarea>
+            </div>
+            <hr>
+            <div class="editgroup_time">
+                <p>Time: <textarea class="edittext" name="group_time">{{meetingTime}}</textarea></p>
+            </div>
+            <hr>
+            <div class="editgroup_location">
+                <p>Location: <textarea class="edittext" name="group_loc">{{meetingLoc}}</textarea></p>
+            </div>
+            
+            <input id="saveChangesButton" type="submit" value="Save Changes">
+		</div>
+	</form>
+
+	<div id="editInfoButton" onclick="editGroupInfo()">
+		Edit Info
+	</div>
+</div>
+

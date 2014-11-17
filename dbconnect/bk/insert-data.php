@@ -29,7 +29,7 @@ if (isset($_POST['submitted'])) {
 
 	<h1>Insert Data into the Database</h1>
 
-	<form method="post" action="insert-data.html">
+	<form method="post" action="insert-data.php">
 	<input type="hidden" name="submitted" value="true" />
 	<br>
 		<label>First Name: <input type="text" name="fname" /></label>
