@@ -35,6 +35,8 @@ html, body {
 	right: 100%;
 	
 	vertical-align: top;
+
+	overflow-y: auto;
 }
 
 #groupNewsfeed {

@@ -67,6 +67,10 @@ function fetchGroup(){
 }
 */
 
+function loadGroupFromDatabase(){
+	
+}
+
 function generateGroupInfoHtml(){
 	var path = templatePath + "groupinfo_test.html";
 	makeTemplate(path, dummyInfo, groupinfoTemplateCallback);

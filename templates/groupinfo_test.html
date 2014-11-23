@@ -1,3 +1,25 @@
+<?php
+$dbconnect_path = "../dbconnect/";
+
+
+//if (isset($_POST['submitted'])) {
+if ($_POST) {
+	include($dbconnect_path + 'connect-mysql.php');
+	$desc = $_POST['group_description'];
+	$meeting_time = $_POST['group_time'];
+	$meeting_loc = $_POST['group_loc'];
+	$sqlinsert = "INSERT INTO groups (description, meeting_time, meeting_location) VALUES ('$desc', '$meeting_time', '$meeting_loc')";
+
+	if (!mysqli_query($dbcon, $sqlinsert)) {
+		die('Error inserting new data, please try again.');
+	}
+
+	$confirm = '1 new record successfully added to database.';
+}
+
+?>
+
+
 <div>
 	<h1>{{name}}</h1>
 	<div id="groupdetails" class="">
@@ -6,7 +28,7 @@
 		<p>Location: {{meetingLoc}}</p>
 	</div>
 
-	<form method="post" action="../../dbconnect/insert-data2_group.php">
+	<form method="post" action="">
 		<div id="editgroup" class="hidden">
 			<div class="editgroup_description">
                 <p>Description: </p>
@@ -29,4 +51,6 @@
 		Edit Info
 	</div>
 </div>
+
+
 
