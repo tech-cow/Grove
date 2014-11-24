@@ -25,8 +25,9 @@ class DB{
 	}
 
 	public function select($table, $where, $col=NULL){
-		if($col == NULL){
-			$col = "*"
+		if($col == NULL)
+		{
+			$col = "*";
 		} else {
 			$col = implode(',',$col);
 		}

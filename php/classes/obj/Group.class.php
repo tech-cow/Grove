@@ -1,6 +1,6 @@
 <?php
 
-require_once 'php/classes/db/DB.class.php';
+require_once '../../php/classes/db/DB.class.php';
 
 class Group{
 	public $id;

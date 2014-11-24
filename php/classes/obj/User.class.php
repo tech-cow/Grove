@@ -1,6 +1,6 @@
 <?php
 
-require_once 'php/classes/db/DB.class.php';
+require_once '../../php/classes/db/DB.class.php';
 
 class User{
 	public $id;
@@ -43,19 +43,15 @@ class User{
 			$data = array(
 				"username"=>"'$this->username'",
 				"password"=>"'$this->pass_hash'",
-				"email"=>"'$this->email'"
+				"email"=>"'$this->email'",
 				"joindate"=>"'".date("Y-m-d H:i:s",time())."'"
 				);
 			$this->id = $db->insert($data, 'users');
 			$this->joindate = time();
 		}
-
 		return true;
-
-
 		//isnewuser will be true if registering a new user,
 		//values will be added instead of just updated
-
 		//new user -> db.insert
 		//not new user -> db.update
 	}

@@ -1,11 +1,8 @@
 <?php
 
-require_once '../php/include/globals.inc.php';
-echo 'butts';
+require_once '../../php/include/global.inc.php';
+
 ?>
-
-
-
 
 <!DOCTYPE html>
 

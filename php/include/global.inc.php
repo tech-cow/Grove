@@ -1,10 +1,10 @@
 <?php
 
-require_once 'php/classes/obj/Group.class.php';
-require_once 'php/classes/obj/User.class.php';
-require_once 'php/classes/db/DB.class.php';
-require_once 'php/classes/controllers/GroupTools.class.php';
-require_once 'php/classes/controllers/UserTools.class.php';
+require_once '../../php/classes/obj/Group.class.php';
+require_once '../../php/classes/obj/User.class.php';
+require_once '../../php/classes/db/DB.class.php';
+require_once '../../php/classes/controller/GroupTools.class.php';
+require_once '../../php/classes/controller/UserTools.class.php';
 
 $db = new DB();
 $db->connect();

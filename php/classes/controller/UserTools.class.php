@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'php/classes/db/DB.class.php';
-require_once 'php/classes/obj/User.class.php';
+require_once '../../php/classes/db/DB.class.php';
+require_once '../../php/classes/obj/User.class.php';
 
 class UserTools {
 	protected $table = "users";

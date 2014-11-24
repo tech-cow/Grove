@@ -1,7 +1,7 @@
 <?php 
 
-require_once 'php/classes/db/DB.class.php';
-require_once 'php/classes/obj/Group.class.php';
+require_once '../../php/classes/db/DB.class.php';
+require_once '../../php/classes/obj/Group.class.php';
 
 class GroupTools {
 	protected $table = "groups";
