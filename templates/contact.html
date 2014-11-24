@@ -1,5 +1,5 @@
 <div class="contact">
-	<div class="contactPicture" onclick="viewContact({{id}})">
+	<div class="contactPicture" onclick="viewContact({{id}})" data-toggle="modal" data-target="#contact{{id}}_modal">
 		<p>pic goes here</p>
 		<img>
 	</div>
@@ -10,3 +10,21 @@
 	</div>
 </div>
 
+<div class="modal fade" id="contact{{id}}_modal" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<div class="modal-header">
+				<h4 class="modal-title" id="myModalLabel"> TITLE YAY </h4>
+			</div>
+
+			<div class="modal-body">
+				This is the content. Yay.
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -13,9 +13,13 @@ require_once '../../php/include/global.inc.php';
 		<meta content="utf-8" http-equiv="encoding">
 
 		<link rel="stylesheet" href="../../css/groupview/studygroup_style.css"/>
+		<link rel="stylesheet" href="../../css/bootstrap/bootstrap.css"/>
+		<link rel="stylesheet" href="../../css/bootstrap/bootstrap-theme.css"/>
+
 		<script src="../../js/lib/jquery211.js"></script>
 		<script src="../../js/lib/handlebars-v2.0.0.js"></script>
-
+		<script src="../../js/bootstrap/bootstrap.js"></script>
+		
 		<script src="../../js/groupviewer.js"></script>
 	</head>
 
