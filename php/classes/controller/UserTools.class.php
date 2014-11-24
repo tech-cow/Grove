@@ -21,5 +21,9 @@ class UserTools {
 	public function get($id){
 
 	}
+
+	public function searchUser($query){
+		//search algorithm goes here
+	}
 }
 ?>

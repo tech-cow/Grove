@@ -11,6 +11,7 @@ class Group{
 	public $meeting_time;
 	public $meeting_location;
 	public $description;
+	public $creation_date;
 
 	function __construct($data){
 		$this->id = (isset($data['id'])) ? $data['id'] : "";
@@ -21,10 +22,38 @@ class Group{
 		$this->meeting_time = (isset($data['meeting_time'])) ? $data['meeting_time'] : "";
 		$this->meeting_location = (isset($data['meeting_location'])) ? $data['meeting_location'] : "";
 		$this->description = (isset($data['description'])) ? $data['description'] : "";
+		$this->creation_date = (isset($data['creation_date'])) ? $data['creation_date'] : "";
 	}
 
 	public function save($isNewGroup){
-		//same logic as user class saving
+		$db = new DB();
+
+		if(!$isNewGroup){ //update info
+			$data = array(
+				"name"=>"'$this->username'",
+				"size_max"=>"'$this->size_max'",
+				"members"=>"'$this->members'",
+				"topic"=>"'$this->topic'",
+				"meeting_time"=>"'$this->meeting_time'",
+				"meeting_location"=>"'$this->meeting_location'",
+				"description"=>"'$this->description'"
+				);
+			$db->update($data, 'groups', "id = ".$this->id);
+		} else { //new group
+			$data = array(
+				"name"=>"'$this->username'",
+				"size_max"=>"'$this->size_max'",
+				"members"=>"'$this->members'",
+				"topic"=>"'$this->topic'",
+				"meeting_time"=>"'$this->meeting_time'",
+				"meeting_location"=>"'$this->meeting_location'",
+				"description"=>"'$this->description'",
+				"creation_date"=>"'".date("Y-m-d H:i:s",time())."'"
+				);
+			$this->id = $db->insert($data, 'users');
+			$this->creation_date = time();
+		}
+		return true;
 	}
 
 }
