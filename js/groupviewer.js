@@ -22,11 +22,24 @@ function Group(contacts, info){
 //should evaluate potential security risks
 //in passing ID like this, being accessible and all that.
 //i predict there will be no trouble, but not sure.
+/*
 var dummyContacts = [
 	{id: 0, name:"bob", content: "i like turtles"},
 	{id: 1, name:"joe", content: "glue is tasty"},
 	{id: 2, name:"mila", content: "look a chair"},
 	{id: 3, name:"enrico", content: "wow am i cool or what"}
+]
+*/
+
+var dummyContacts = [
+	{id: 0, name:"", content: ""},
+	{id: 1, name:"", content: ""},
+	{id: 2, name:"", content: ""},
+	{id: 3, name:"", content: ""}
+]
+
+var emptyContact = [
+	{id: -1, name:"empty", content:"no content"}
 ]
 
 var dummyInfo = {
@@ -83,12 +96,25 @@ function groupinfoTemplateCallback(data, context){
 
 function generateContactHtml(){
 	var path = templatePath + 'contact.html';
+	var emptypath = templatePath + 'contact_empty.html';
+
+	while(dummyContacts.length < dummyGroup.maxcontacts){
+		dummyContacts.push(emptyContact[0]);
+	}
 
 	for(var i = 0; i < dummyContacts.length; i++){
-		console.log("Generating html for contact");
-		console.log(dummyContacts[i].name);
-		makeTemplate(path, dummyContacts[i], contactTemplateCallback);
+		//console.log("Generating html for contact");
+		if(dummyContacts[i].name=="empty"){
+			makeTemplate(emptypath, dummyContacts[i], contactTemplateCallback);	
+		}else{
+			makeTemplate(path, dummyContacts[i], contactTemplateCallback);	
+		}
 	}
+/*
+	if(dummyContacts.length <= dummyGroup.maxcontacts){
+		makeTemplate(emptypath, emptyContact, contactTemplateCallback);
+	}
+*/
 }
 
 function contactTemplateCallback(data, context){
