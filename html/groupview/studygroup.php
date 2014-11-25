@@ -1,7 +1,16 @@
 <?php
 
 require_once '../../php/include/global.inc.php';
+session_start();
 
+//test value, remove for production
+$_SESSION['groupID'] = 1;
+
+echo $_SESSION['groupID'];
+//$groupTools = new GroupTools();
+
+//$currentGroup = $groupTools->get($_SESSION['groupID']);
+//$_COOKIE['group'] = json_encode($currentGroup);
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +31,7 @@ require_once '../../php/include/global.inc.php';
 		
 		<script src="../../js/groupviewer.js"></script>
 	</head>
-
+	<div class="hidden" id="groupInfo"></div>
 
 	<body>
 		<!--I am wondering why this part is commented out-->

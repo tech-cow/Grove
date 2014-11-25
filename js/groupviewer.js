@@ -22,22 +22,22 @@ function Group(contacts, info){
 //should evaluate potential security risks
 //in passing ID like this, being accessible and all that.
 //i predict there will be no trouble, but not sure.
-/*
+
 var dummyContacts = [
 	{id: 0, name:"bob", content: "i like turtles"},
 	{id: 1, name:"joe", content: "glue is tasty"},
 	{id: 2, name:"mila", content: "look a chair"},
 	{id: 3, name:"enrico", content: "wow am i cool or what"}
 ]
-*/
 
+/*
 var dummyContacts = [
 	{id: 0, name:"", content: ""},
 	{id: 1, name:"", content: ""},
 	{id: 2, name:"", content: ""},
 	{id: 3, name:"", content: ""}
 ]
-
+*/
 var emptyContact = [
 	{id: -1, name:"empty", content:"no content"}
 ]
@@ -80,8 +80,40 @@ function fetchGroup(){
 }
 */
 
-function loadGroupFromDatabase(){
-	
+function getGroup(){
+	$.ajax({
+		type:"POST",
+		url:"./testhandler.php",
+		data:"getGroup=1",
+		success: function(response){
+			console.log("got response: " + response);
+			$("#groupInfo").html(response);
+		}
+	});
+}
+
+function getMember(memberID){
+	$.ajax({
+		type:"POST",
+		url:"./testhandler.php",
+		data:"getMember="+memberID,
+		success: function(response){
+			console.log(response);
+		}
+	});
+}
+
+function getCookie(cookie_name){
+	var name = cookie_name + "=";
+	var ca = document.cookie.split(";");
+	for(var i = 0; i < ca.length; i++){
+		var c = ca[i];
+		while(c.charAt(0) == " "){
+			c = c.substring(1);
+		}
+		if(c.indexOf(name) != -1) return c.substring(name.length, c.length);
+	}
+	return "";
 }
 
 function generateGroupInfoHtml(){

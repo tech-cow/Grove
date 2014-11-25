@@ -12,6 +12,15 @@ $db->connect();
 $userTools = new UserTools();
 $groupTools = new GroupTools();
 
+session_start();
+
+if(isset($_POST['getGroup'])){
+	echo json_encode($groupTools->get($_SESSION['groupID']));
+} else if(isset($_POST['getMember'])){
+	echo "getting member ".$_POST['getMember'];
+	echo json_encode($userTools->get($_POST['getMember']));
+}
+
 /*
 session_start();
 if(isset($_SESSION['logged_in'])){
@@ -23,5 +32,8 @@ if(isset($_SESSION['logged_in'])){
 any sort of login or authentication system or stuff
 
 */
+
+
+
 
 ?>
