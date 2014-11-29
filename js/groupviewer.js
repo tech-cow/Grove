@@ -82,12 +82,27 @@ function fetchGroup(){
 
 function getGroup(){
 	$.ajax({
-		type:"POST",
+		type:"POST", //fuck it should be a get
 		url:"./testhandler.php",
 		data:"getGroup=1",
 		success: function(response){
 			console.log("got response: " + response);
 			$("#groupInfo").html(response);
+		}
+	});
+}
+
+//this function uses api!
+function getUser(userID){
+	$.ajax({
+		type:"GET",
+		url: "../../php/api/get/getuser.php",
+		data:{
+			"apikey":"lolnokeyauthentication",
+			"userID":userID
+		},
+		success: function(response){
+			console.log(response);
 		}
 	});
 }
