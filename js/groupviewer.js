@@ -79,7 +79,7 @@ function fetchGroup(){
 	group = new Group(contacts, info);
 }
 */
-
+/*
 function getGroup(){
 	$.ajax({
 		type:"POST", //fuck it should be a get
@@ -90,6 +90,19 @@ function getGroup(){
 			$("#groupInfo").html(response);
 		}
 	});
+}*/
+
+function getGroup(groupID){
+	$.ajax({
+		type:"GET",
+		url: "../../php/api/get/getgroup.php",
+		data: {
+			"groupID":groupID
+		},
+		success: function(response){
+			console.log(response);
+		}
+	})
 }
 
 //this function uses api!
