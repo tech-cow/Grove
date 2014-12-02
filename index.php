@@ -22,7 +22,7 @@ $errors = array();
 		
 <head>
 	<title>Grove</title>
-	<link rel="stylesheet" href="../../css/groupview/login_style.css"/>
+	<link rel="stylesheet" href="css/login/login_style.css"/>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <!--this line of code get rid of the wierd symbol ("Â") of the copyright-->
 </head>
@@ -51,7 +51,7 @@ $errors = array();
 					<input type="submit" value = "Log in">
 				</p>
 				<p>
-				<a href="register.php">Register</a>
+				<a href="../../php/login/Grove_Signup.php">Signup</a>
 				</p>
 
 			</ul>
@@ -60,7 +60,7 @@ $errors = array();
 
 
     	<div class="login-help">
-    		<p>Forgot your password? <a href="cp.html">Click here to reset it</a>.</p>
+    		<p>Forgot your password? <a href="php/login/change_pass.html">Click here to reset it</a>.</p>
     	</div>
 
 </div>
