@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript" src="./Libraries/Documents/Github/Team_COOLGUYS/js/lib/handlebars-v2.0.0.js"></script>
     <script src="Grove_Homepage.js"></script>
     
     <style>
@@ -80,6 +81,14 @@
 
         /*** MATCHES PIECES ***/
 
+        .mgscroll1 {
+            width: 100%;
+            overflow: scroll; 
+        }
+        .homepage_scroll {
+            width: 100%;
+            height: 380px;
+        }
         .match, .group, .contact {
             position: relative;
             background: yellow;
@@ -195,64 +204,19 @@
         <div class="matches">
         <h3>Your Matches</h3>
 
-            <div class="match">
-                <div class="thumb"></div>
-                <div class="info">
-                    <div class="name">Yu Zhou
-                        <?php
-                            $sqlget2 = "SELECT firstname + lastname
-                                        FROM people
-                                        WHERE ((good = bad && bad = good) || (othergood = otherbad && otherbad = othergood));"
-                            $sqldata = mysqli_query($dbcon, $sqlget2) or die('Error retrieving data.');
-                            while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
-                                echo $row['firstname'];
-                                echo $row['lastname'];
-                            }
-                        ?>
-                    </div>
-                    <div class="stats"><span id="greent">Math
-                        <?php while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
-                            if ($row['othergood'] == 'NULL') {
-                                echo $row['good'];
-                            } else {
-                                echo $row['othergood'];
-                            }
-                        } ?>
-                    &nbsp&nbsp</span><span id="redt">Spanish
-                        <?php while ($row = mysqli_fetch_array($sqldata, MYSQLI_ASSOC)) {
-                            if ($row['otherbad'])
-                                echo $row['good'];
-                            } else {
-                                echo $row['otherbad'];
-                            }
-                        } ?>
-                    </span></div>
-                </div>
-                <div class="message"><img src="message.jpg" /></div>
-            </div>
+            <div class="mgscroll1">
+            <div class="homepage_scroll" id="match_container">
 
-            <div class="match">
-                <div class="thumb"></div>
-                <div class="info">
-                    <div class="name">Simon R-G</div>
-                    <div class="stats"><span id="greent">Math&nbsp&nbsp</span><span id="redt">Spanish</span></div>
-                </div>
-                <div class="message"><img src="message.jpg" /></div>
             </div>
-
-            <div class="match">
-                <div class="thumb"></div>
-                <div class="info">
-                    <div class="name">Cathy Yueming</div>
-                    <div class="stats"><span id="greent">Math&nbsp&nbsp</span><span id="redt">Spanish</span></div>
-                </div>
-                <div class="message"><img src="message.jpg" /></div>
             </div>
 
         </div>
 
         <div class="groups">
-        <h3>Related Groups</h3>    
+        <h3>Related Groups</h3>
+
+            <div class="mgscroll1">
+            <div class="homepage_scroll" id="match_container">    
 
             <div class="group">
                 <div class="group_name">Linear Algebra Study Group</div>
@@ -270,6 +234,9 @@
                 <div class="group_name">MATH 3130 Test Prep</div>
                 <div class="host">Host: Kevin O.</div>
                 <div class="members">Members: 6 (Max: 8)</div>
+            </div>
+
+            </div>
             </div>
 
         </div>
