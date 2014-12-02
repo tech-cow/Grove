@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 require_once '../../php/include/global.inc.php';
 session_start();
