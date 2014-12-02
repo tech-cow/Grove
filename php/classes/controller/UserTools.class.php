@@ -27,7 +27,7 @@ class UserTools {
 		$result = $db->select('users',"id='$id'");
 		return new User($result);
 	}
-
+/*
 	public function getByName($name){
 		$db = new DB();
 		$result = $db->select('users','name="$name"');
@@ -40,7 +40,7 @@ class UserTools {
 		} else {
 			return new User($result);
 		}
-	}
+	}*/
 
 	//data should be formatted in json i guess?
 	public function edit($userID, $data){

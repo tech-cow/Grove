@@ -23,6 +23,10 @@ function Group(contacts, info){
 //in passing ID like this, being accessible and all that.
 //i predict there will be no trouble, but not sure.
 
+//var apilib = require('./path/to/api');
+
+//apilib.getuser(things, stuff);
+
 var dummyContacts = [
 	{id: 0, name:"bob", content: "i like turtles"},
 	{id: 1, name:"joe", content: "glue is tasty"},
@@ -106,6 +110,7 @@ function getGroup(groupID){
 }
 
 //this function uses api!
+/*
 function getUser(userID){
 	$.ajax({
 		type:"GET",
@@ -114,9 +119,7 @@ function getUser(userID){
 			"apikey":"lolnokeyauthentication",
 			"userID":userID
 		},
-		success: function(response){
-			console.log(response);
-		}
+		success: callback(response)
 	});
 }
 
@@ -130,7 +133,7 @@ function getMember(memberID){
 		}
 	});
 }
-
+*/
 function getCookie(cookie_name){
 	var name = cookie_name + "=";
 	var ca = document.cookie.split(";");
@@ -217,7 +220,35 @@ function editGroupInfo(){
 function viewContact(contact_id){
 	console.log("viewing contact "+contact_id);
 }
-
+/*
 $(document).ready( function() { 
+	require('../../js/lib/apilib.js');
 	loadGroup();
 });
+*/
+
+(function() {
+	requirejs.config(
+		{
+			paths: {
+				'jquery' : '../../js/lib/jquery211',
+				'Handlebars' : '../../js/lib/handlebars-v2.0.0',
+				'text' : '/js/lib/text',
+				'templates' : '/templates/templates.html',
+				'apilib' : '/js/lib/modules/apilib',
+				'templatelib' : '/js/lib/modules/templatelib',
+				'dataserv' : '/js/lib/modules/dataserv'
+			}
+		}
+	);
+
+	require(
+		['apilib','templatelib'],
+		function(apilib, templatelib){
+			var test = apilib.getUser('3', templatelib.makeTemplate(test)); //p.s. this is pseudocode
+		}
+	);
+
+})();
+
+

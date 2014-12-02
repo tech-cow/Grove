@@ -25,11 +25,13 @@ echo $_SESSION['groupID'];
 		<link rel="stylesheet" href="../../css/bootstrap/bootstrap.css"/>
 		<link rel="stylesheet" href="../../css/bootstrap/bootstrap-theme.css"/>
 
+		<script data-main="../../js/groupviewer.js" src="../../js/lib/require.js"></script>
+		<!--script src="../../js/require.js"></script>
 		<script src="../../js/lib/jquery211.js"></script>
 		<script src="../../js/lib/handlebars-v2.0.0.js"></script>
-		<script src="../../js/bootstrap/bootstrap.js"></script>
-		
-		<script src="../../js/groupviewer.js"></script>
+		<script src="../../js/bootstrap/bootstrap.js"></script-->
+
+		<!--script src="../../js/groupviewer.js"></script-->
 	</head>
 	<div class="hidden" id="groupInfo"></div>
 
