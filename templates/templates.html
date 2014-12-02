@@ -1,99 +1,101 @@
-<div id="contact-template">
-	<div class="contact">
-		<div class="contactPicture" onclick="viewContact({{id}})" data-toggle="modal" data-target="#contact{{id}}_modal">
-			<p>pic goes here</p>
-			<img>
+<div id="templates">
+	<div id="contact-template">
+		<div class="contact">
+			<div class="contactPicture" onclick="groupviewer_functions.viewContact({{id}})" data-toggle="modal" data-target="#contact{{id}}_modal">
+				<p>pic goes here</p>
+				<img>
+			</div>
+
+			<div class="contactDetails">
+				<h1>Name: {{name_first}} {{name_last}}</h1>
+				<p>Content: {{content}}</p>
+			</div>
 		</div>
 
-		<div class="contactDetails">
-			<h1>Name: {{name}}</h1>
-			<p>Content: {{content}}</p>
-		</div>
-	</div>
+		<div class="modal fade" id="contact{{id}}_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
 
-	<div class="modal fade" id="contact{{id}}_modal" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel"> {{name}} </h4>
+					</div>
 
-				<div class="modal-header">
-					<h4 class="modal-title" id="myModalLabel"> {{name}} </h4>
-				</div>
+					<div class="modal-body">
+						So you want to add {{name}} as a contact? Well here's some amazingly well formatted
+						and informative data on him/her: {{content}}
+					</div>
 
-				<div class="modal-body">
-					So you want to add {{name}} as a contact? Well here's some amazingly well formatted
-					and informative data on him/her: {{content}}
-				</div>
-
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div id="contact-empty-template">
-	<div class="contact">
-		<div class="contactPicture" onclick="viewContact({{id}})" data-toggle="modal" data-target="#emptycontact_modal">
-			<p>+</p>
-			<img>
+	<div id="contact-empty-template">
+		<div class="contact">
+			<div class="contactPicture" onclick="viewContact({{id}})" data-toggle="modal" data-target="#emptycontact_modal">
+				<p>+</p>
+				<img>
+			</div>
+
+			<div class="contactDetails">
+				<div class="filler"></div>
+			</div>
 		</div>
 
-		<div class="contactDetails">
-			<div class="filler"></div>
-		</div>
-	</div>
+		<div class="modal fade" id="emptycontact_modal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
 
-	<div class="modal fade" id="emptycontact_modal" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel"> Look for new members </h4>
+					</div>
 
-				<div class="modal-header">
-					<h4 class="modal-title" id="myModalLabel"> Look for new members </h4>
-				</div>
+					<div class="modal-body">
+						New member options go here
+					</div>
 
-				<div class="modal-body">
-					New member options go here
-				</div>
-
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
 
-<div id="group-template">
-	<div>
-		<h1>{{name}}</h1>
-		<div id="groupdetails" class="">
-			<p>{{description}}</p>
-			<p>Time: {{meetingTime}}</p>
-			<p>Location: {{meetingLoc}}</p>
-		</div>
-
-		<form method="post">
-			<div id="editgroup" class="hidden">
-				<div class="editgroup_description">
-		            <p>Description: </p>
-		            <textarea class="edittext">{{description}}</textarea>
-		        </div>
-		        <hr>
-		        <div class="editgroup_time">
-		            <p>Time: <textarea class="edittext">{{meetingTime}}</textarea></p>
-		        </div>
-		        <hr>
-		        <div class="editgroup_location">
-		            <p>Location: <textarea class="edittext">{{meetingLoc}}</textarea></p>
-		        </div>
-		        
-		        <input id="saveChangesButton" type="submit" value="Save Changes">
+	<div id="group-template">
+		<div>
+			<h1>{{name}}</h1>
+			<div id="groupdetails" class="">
+				<p>{{description}}</p>
+				<p>Time: {{meetingTime}}</p>
+				<p>Location: {{meetingLoc}}</p>
 			</div>
-		</form>
 
-		<div id="editInfoButton" onclick="editGroupInfo()">
-			Edit Info
+			<form method="post">
+				<div id="editgroup" class="hidden">
+					<div class="editgroup_description">
+			            <p>Description: </p>
+			            <textarea class="edittext">{{description}}</textarea>
+			        </div>
+			        <hr>
+			        <div class="editgroup_time">
+			            <p>Time: <textarea class="edittext">{{meetingTime}}</textarea></p>
+			        </div>
+			        <hr>
+			        <div class="editgroup_location">
+			            <p>Location: <textarea class="edittext">{{meetingLoc}}</textarea></p>
+			        </div>
+			        
+			        <input id="saveChangesButton" type="submit" value="Save Changes">
+				</div>
+			</form>
+
+			<div id="editInfoButton" onclick="editGroupInfo()">
+				Edit Info
+			</div>
 		</div>
 	</div>
 </div>

@@ -9,7 +9,11 @@ define(
 				dataType: 'json',
 				data: data,
 				success: function(data){
+					console.log(data);
 					callback(data);
+				},
+				error: function(jqxhr, except){
+					console.log('error: ', except);
 				}
 			});
 		};
