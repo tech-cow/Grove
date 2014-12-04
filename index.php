@@ -51,7 +51,7 @@ $errors = array();
 					<input type="submit" value = "Log in">
 				</p>
 				<p>
-				<a href="../../php/login/Grove_Signup.php">Signup</a>
+				<a href="../../php/login/test.php">Signup</a>
 				</p>
 
 			</ul>

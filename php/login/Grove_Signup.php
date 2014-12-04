@@ -38,7 +38,7 @@ if (isset($_POST['submitted'])) {
 	if (!mysqli_query($dbcon, $sqlinsert)) {
 		die('Error inserting new data, please try again.');
 	}
-
+	echo 'Successfully registered. You can now <a href="signin.php">sign in</a> and start posting! :-)';
 	$confirm = 'Your new record has been successfully added to database.';
 }
 
