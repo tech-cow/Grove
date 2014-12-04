@@ -24,7 +24,20 @@ if (isset($_POST['submitted'])) {
     	die('Oops! Those two passwords do not match. Please try again.');
  	}
 
-	include('connect-mysql.php');
+	//include('connect-mysql.php');
+	$dbhost = 'localhost';  
+   	$dbuser = 'root';      
+   	$dbpass = ' ';
+   	$conn = mysql_connect($dbhost, $dbuser, $dbpass);
+   	if(! $conn )
+   	{
+     	die('Could not connect: ' . mysql_error());
+   	}
+   	echo 'Connected successfully';
+  	// mysql_close($conn);
+
+
+
 	$fname = $_POST['fname'];
 	$lname = $_POST['lname'];
 	$email = $_POST['email'];
@@ -35,11 +48,12 @@ if (isset($_POST['submitted'])) {
 	$nogood = $_POST['nogood'];
 	$sqlinsert = "INSERT INTO people (firstname, lastname, email, password, good, othergood, bad, otherbad) VALUES ('$fname', '$lname', '$email', '$pass', '$good', '$great', '$bad', '$nogood')";
 
-	if (!mysqli_query($dbcon, $sqlinsert)) {
+	if (!mysqli_query( $sqlinsert,$conn)) {
 		die('Error inserting new data, please try again.');
 	}
-	echo 'Successfully registered. You can now <a href="signin.php">sign in</a> and start posting! :-)';
+
 	$confirm = 'Your new record has been successfully added to database.';
+	mysql_close($conn);
 }
 
 ?>
