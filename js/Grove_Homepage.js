@@ -10,9 +10,9 @@ var path = "../../template/contact.html";
 var dummydata = [
 	{id:0, name:"bob", content: "god spence is attractive"},
 	{id:1, name:"joe", content: "i heard he's a model"},
-	{id:2, name:"jan", content: "yeah but he quite because of reasons"},
+	{id:2, name:"jan", content: "yeah but he quit because of reasons"},
 	{id:3, name:"sue", content: "still stuper attractive"},
-	{id:4, name:"max", content: "totally right"},]
+	{id:4, name:"max", content: "totally"},]
 
 function contactTemplateCallback(data, context){
 	var result=Handlebars.compile(data);
@@ -28,18 +28,18 @@ function makeTemplate(path, context, callback){
 }
 
 
-// function GenerateHtml() {
-// 	// for (i = 0; i < 3; i++) {
+function GenerateHtml() {
+// for (i = 0; i < 3; i++) {
 
-// 	$( ".homepage_scroll" ).append( "<div class='match'></div>" );
-// 	$( ".match" ).append( "<div class='thumb'></div>" );
-// 	$( ".match" ).append( "<div class='info'>" );
-// 	$( ".info" ).append( "<div class='name'>Pasta Farian</div>" );
-// 	$( ".info" ).append
-// 	( "<div class='stats'><span id='greent'>French&nbsp&nbsp</span><span id='redt'>Algebra&nbsp&nbsp</span></div></div>" );
-// 	$( ".match" ).append( "<div class='message'><img src='hi.jpg'></div>" );
+	// $( ".homepage_scroll" ).append( "<div class='match'></div>" );
+	// $( ".match" ).append( "<div class='thumb'></div>" );
+	// $( ".match" ).append( "<div class='info'>" );
+	// $( ".info" ).append( "<div class='name'>Pasta Farian</div>" );
+	// $( ".info" ).append
+	// ( "<div class='stats'><span id='greent'>French&nbsp&nbsp</span><span id='redt'>Algebra&nbsp&nbsp</span></div></div>" );
+	// $( ".match" ).append( "<div class='message'><img src='hi.jpg'></div>" );
 
-// 	// }
+// }
 // }
 
 $(document).ready(function() {
@@ -47,6 +47,13 @@ $(document).ready(function() {
 	for (i = 0; i < 3; i++) {
 
 		makeTemplate(path, dummydata[i], contactTemplateCallback);
+		// 	$( ".homepage_scroll" ).append( "<div class='match'></div>" );
+		// 	$( ".match" ).append( "<div class='thumb'></div>" );
+		// 	$( ".match" ).append( "<div class='info'>" );
+		// 	$( ".info" ).append( "<div class='name'>Pasta Farian</div>" );
+		// 	$( ".info" ).append
+		// 	( "<div class='stats'><span id='greent'>French&nbsp&nbsp</span><span id='redt'>Algebra&nbsp&nbsp</span></div></div>" );
+		// 	$( ".match" ).append( "<div class='message'><img src='hi.jpg'></div>" );
 
 	}
 
