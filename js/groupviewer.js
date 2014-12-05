@@ -23,8 +23,10 @@
 	require(
 		['apilib','templatelib', 'groupviewer_functions'],
 		function(apilib, templatelib, groupviewer_functions){
-			
-			var test = apilib.getUser('3', templatelib.makeContactTemplate(test,'.groupmemberContainer')); //p.s. this is pseudocode
+			window.viewContact = groupviewer_functions.viewContact;
+			console.log(groupviewer_functions.viewContact);
+			var test = apilib.getUser('3', templatelib.makeContactTemplate, ['.groupmemberContainer']); //p.s. this is pseudocode
+			var group = apilib.getGroup('1', templatelib.makeGroupTemplate, ['.groupinfoContainer']);
 		}
 	);
 

@@ -3,16 +3,25 @@ define(
 	['jquery', 'dataserv'],
 	
 	function($, dataserv){
-		var getGroup = function(id, callback) {
+		var getGroup = function(id, callback, params) {
 			var url = "/php/api/get/getgroup.php";
-			var data = {'groupID':id};
-			dataserv.callApi(url, data, 'GET', callback);
+			var data = {
+				'groupID':id,
+				'apikey':'greatsecuritybro'
+			};
+
+			dataserv.callApi(url, data, 'GET', callback, params);
 		};
 
-		var getUser = function(id, callback) {
+		var getUser = function(id, callback, params) {
 			var url = "/php/api/get/getuser.php";
-			var data = {'userID':id};
-			dataserv.callApi(url, data, 'GET', callback);
+			var data = {
+				'userID':id,
+				'apikey':'literally_anything'
+			};
+			//console.log('passing callback: ' + callback);
+			console.log('params : '+ params);
+			dataserv.callApi(url, data, 'GET', callback, params);
 		};
 
 		return {

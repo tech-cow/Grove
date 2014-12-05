@@ -8,20 +8,14 @@ define(
 			$(target).append(outTempl(context));
 		};
 
-		var makeContactTemplate = function(context, target){
-			//var templ = $('#contact-template', templates);
-			//console.log($(templates).find('#contact-template'));
-			//console.log(templates);
-			console.log(context);
+		var makeContactTemplate = function(target, context){
 			var templ = $(templates).find('#contact-template').html();
-
-			//console.log(thing.find('#contact-template').html());
 			var outTempl = handlebars.compile(templ);
 			$(target).append(outTempl(context));
 		}
 
-		var makeGroupTemplate = function(context, target){
-			var templ = $('#group-template');
+		var makeGroupTemplate = function(target, context){
+			var templ = $(templates).find('#group-template').html();
 			var outTempl = handlebars.compile(templ);
 			$(target).append(outTempl(context));
 		}
