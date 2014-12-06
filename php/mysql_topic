@@ -1,0 +1,8 @@
+REATE TABLE Topics (
+topic_id  INT(8) NOT NULL AUTO_INCREMENT,
+topic_subject  VARCHAR(255) NOT NULL,
+topic_date  DATETIME NOT NULL,
+topic_group  INT(8) NOT NULL,
+topic_by  INT(8) NOT NULL,
+PRIMARY KEY (topic_id)
+) TYPE=INNODB;
