@@ -1,4 +1,4 @@
-REATE TABLE Catergery_group(
+CREATE TABLE Catergery_group(
 group_id  INT(8) NOT NULL AUTO_INCREMENT,
 group_name  VARCHAR(255) NOT NULL,
 group_description  VARCHAR(255) NOT NULL,

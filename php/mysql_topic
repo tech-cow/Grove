@@ -1,4 +1,4 @@
-REATE TABLE Topics (
+CREATE TABLE Topics (
 topic_id  INT(8) NOT NULL AUTO_INCREMENT,
 topic_subject  VARCHAR(255) NOT NULL,
 topic_date  DATETIME NOT NULL,
