@@ -1,4 +1,16 @@
 <!doctype html>
+
+<!--
+/*! @mainpage Grove Signup Page
+*
+* @author Spence Hood
+*
+* @brief This is where new users will be directed to sign up for a Grove account.  Here they will input basic identity info and say which subjects they are good/bad at.  This info will then be stored in the database for future reference.
+* @return This page doesn't have any parameters or returns, per say.  It is the first step for the user towards entering the app.
+*
+*/
+-->
+
 <html>
 
 <head>
