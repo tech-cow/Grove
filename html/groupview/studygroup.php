@@ -9,6 +9,10 @@
 *
 */
 
+/*! @param No parameters necessary here, as the group, by this point, has already been created.
+ *  @result A session ID is stored for this specific group for future reference.
+*/
+
 require_once '../../php/include/global.inc.php';
 session_start();
 
@@ -39,7 +43,6 @@ echo $_SESSION['groupID'];
 	<div class="hidden" id="groupInfo"></div>
 
 	<body>
-		<!--I am wondering why this part is commented out-->
 		<!--h1 class="header">Hello world hooray</h1-->
         
         <!--div class="header">

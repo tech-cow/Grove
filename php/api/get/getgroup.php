@@ -11,6 +11,11 @@ require_once '../../classes/db/DB.class.php';
 *
 */
 
+/*! @param Just requires a database connection, which is handled at the beginning of the function.
+ *  @result Standard information regarding the student group is fetched
+ *  @test The test scenario would be if a user clicked on a student group from the homepage, thus being directed to the groupview page and triggering this function
+*/
+
 function getgroup(){ 
 	$db = new DB();
 	$db->connect();
