@@ -1,4 +1,13 @@
-	<?php
+<?php
+
+/*! @mainpage Grove Study Group Page
+*
+* @author Simon R-G
+*
+* @brief This is where users will see details about a certain Study Group, including its topic, its members, its maximum capacity, and when/where it meets.  
+* @return Again, there isn't much of a return here, technically speaking, but the user can join the study group and learn about other Grove users here.  Another potential feature to be added in the future would be a group forum, so that all members could communicate from this page.
+*
+*/
 
 require_once '../../php/include/global.inc.php';
 session_start();
