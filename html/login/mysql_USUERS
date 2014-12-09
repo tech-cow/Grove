@@ -1,13 +1,13 @@
-CREATE TABLE USERS (
+CREATE TABLE Users (
 user_id     INT(8) NOT NULL AUTO_INCREMENT,
-firstname   VARCHAR(255) NOT NULL,
-lastname   VARCHAR(255) NOT NULL,
-email  VARCHAR(255) NOT NULL,
-password   varchar(255) NOT NULL,
-good  varchar(255) NOT NULL,
-othergood  varchar(255) NOT NULL,
-bad  varchar(255) NOT NULL,
-otherbad  varchar(255) NOT NULL,
+user_fn   VARCHAR(255) NOT NULL,
+user_ln   VARCHAR(255) NOT NULL,
+user_email  VARCHAR(255) NOT NULL,
+user_pw   varchar(255) NOT NULL,
+user_good  varchar(255) NOT NULL,
+user_agood  varchar(255) NOT NULL,
+user_bad  varchar(255) NOT NULL,
+user_abad  varchar(255) NOT NULL,
 UNIQUE INDEX user_name_unique (user_name),
 PRIMARY KEY (user_id)
 ) TYPE=INNODB;

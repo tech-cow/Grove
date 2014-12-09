@@ -1,6 +1,7 @@
 <?php session_start() ?>
 
 <!doctype html>
+
 <html>
 
 <head>
@@ -21,7 +22,24 @@
 <body>
 
 <?php
+<<<<<<< HEAD:html/login/Grove_Signup.php
 /*
+=======
+
+/*! @mainpage Grove Signup Page
+*
+* @author Spence Hood
+*
+* @brief This is where new users will be directed to sign up for a Grove account.  Here they will input basic identity info and say which subjects they are good/bad at.  This info will then be stored in the database for future reference.
+* @return This page doesn't have any parameters or returns, per say.  It is the first step for the user towards entering the app.
+*
+*/
+
+/*! @param This function tests to see if the "submitted" form input has been set.  If so, the form has been filled out and the db connections should be made
+ *  @result This function will do several things.  It will test that the two input passwords match, it will connect with the db, and it will input user identity info based on what they've filled out in the form. 
+*/
+
+>>>>>>> 0a6e16ac8ba58e37cf325c1ed3b180de3e82a010:php/login/Grove_Signup.php
 if (isset($_POST['submitted'])) {
 
 	if ($_POST['pass'] != $_POST['pass2']) {

@@ -1,4 +1,35 @@
+<<<<<<< HEAD
 <?php session_start(); ?>
+=======
+<?php
+
+/*! @mainpage Grove Study Group Page
+*
+* @author Simon R-G
+*
+* @brief This is where users will see details about a certain Study Group, including its topic, its members, its maximum capacity, and when/where it meets.  
+* @return Again, there isn't much of a return here, technically speaking, but the user can join the study group and learn about other Grove users here.  Another potential feature to be added in the future would be a group forum, so that all members could communicate from this page.
+*
+*/
+
+/*! @param No parameters necessary here, as the group, by this point, has already been created.
+ *  @result A session ID is stored for this specific group for future reference.
+*/
+
+require_once '../../php/include/global.inc.php';
+session_start();
+
+//test value, remove for production
+$_SESSION['groupID'] = 1;
+
+echo $_SESSION['groupID'];
+//$groupTools = new GroupTools();
+
+//$currentGroup = $groupTools->get($_SESSION['groupID']);
+//$_COOKIE['group'] = json_encode($currentGroup);
+?>
+
+>>>>>>> 0a6e16ac8ba58e37cf325c1ed3b180de3e82a010
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,7 +46,6 @@
 	<div class="hidden" id="groupInfo"></div>
 
 	<body>
-		<!--I am wondering why this part is commented out-->
 		<!--h1 class="header">Hello world hooray</h1-->
         
         <!--div class="header">
