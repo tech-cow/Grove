@@ -1,6 +1,10 @@
 <?php
 
-require_once '../../php/classes/db/DB.class.php';
+//require_once '../../php/classes/db/DB.class.php';
+//require_once '../../classes/db/DB.class.php';
+
+//require_once '../../db/DB.class.php';
+
 
 class Group{
 	public $id;
@@ -30,7 +34,7 @@ class Group{
 
 		if(!$isNewGroup){ //update info
 			$data = array(
-				"name"=>"'$this->username'",
+				"name"=>"'$this->name'",
 				"size_max"=>"'$this->size_max'",
 				"members"=>"'$this->members'",
 				"topic"=>"'$this->topic'",

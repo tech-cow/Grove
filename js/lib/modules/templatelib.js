@@ -15,9 +15,12 @@ define(
 		}
 
 		var makeGroupTemplate = function(target, context){
+			//console.log('making template with context: ' + context);
+			console.log("it is a : " + typeof(context));
 			var templ = $(templates).find('#group-template').html();
 			var outTempl = handlebars.compile(templ);
-			$(target).append(outTempl(context));
+			$(target).html(''); // clear the target 
+			$(target).append(outTempl(context));  // put the new data in
 		}
 
 		return{

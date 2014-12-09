@@ -1,18 +1,23 @@
 <?php
+session_start();
 
 require_once '../../php/classes/obj/Group.class.php';
 require_once '../../php/classes/obj/User.class.php';
 require_once '../../php/classes/db/DB.class.php';
 require_once '../../php/classes/controller/GroupTools.class.php';
 require_once '../../php/classes/controller/UserTools.class.php';
-
+/*
+require_once '../classes/obj/Group.class.php';
+require_once '../classes/obj/User.class.php';
+require_once '../classes/db/DB.class.php';
+require_once '../classes/controller/GroupTools.class.php';
+require_once '../classes/controller/UserTools.class.php';
+*/
 $db = new DB();
 $db->connect();
 
 $userTools = new UserTools();
 $groupTools = new GroupTools();
-
-session_start();
 
 if(isset($_POST['getGroup'])){
 	echo json_encode($groupTools->get($_SESSION['groupID']));

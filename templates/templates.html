@@ -67,29 +67,29 @@
 
 	<div id="group-template">
 		<div>
-			<h1>{{name}}</h1>
+			<h1>{{name}} ({{id}})</h1>
 			<div id="groupdetails" class="">
 				<p>{{description}}</p>
-				<p>Time: {{meetingTime}}</p>
-				<p>Location: {{meetingLoc}}</p>
+				<p>Time: {{meeting_time}}</p>
+				<p>Location: {{meeting_location}}</p>
 			</div>
 
-			<form method="post">
+			<form method="post" id="submitgroupinfo">
 				<div id="editgroup" class="hidden">
 					<div class="editgroup_description">
 			            <p>Description: </p>
-			            <textarea class="edittext">{{description}}</textarea>
+			            <textarea form="submitgroupinfo" class="edittext" name="description">{{description}}</textarea>
 			        </div>
 			        <hr>
 			        <div class="editgroup_time">
-			            <p>Time: <textarea class="edittext">{{meetingTime}}</textarea></p>
+			            <p>Time: <input type="text" class="edittext" name="meeting_time" value="{{meeting_time}}"></input></p>
 			        </div>
 			        <hr>
 			        <div class="editgroup_location">
-			            <p>Location: <textarea class="edittext">{{meetingLoc}}</textarea></p>
+			            <p>Location: <input type="text" class="edittext" name="meeting_location" value="{{meeting_location}}"></input></p>
 			        </div>
 			        
-			        <input id="saveChangesButton" type="submit" value="Save Changes">
+			        <input id="saveChangesButton" onclick="postgroupinfo({{id}}, this.form)" type="button" value="Save Changes">
 				</div>
 			</form>
 

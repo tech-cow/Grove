@@ -1,7 +1,13 @@
 <?php 
 
-require_once '../../php/classes/db/DB.class.php';
-require_once '../../php/classes/obj/Group.class.php';
+//require_once '../../php/classes/db/DB.class.php';
+
+//require_once '../../classes/db/DB.class.php';
+
+//require_once '../db/DB.class.php';
+//require_once '/../db/DB.class.php';
+
+//require_once '../../classes/obj/Group.class.php';
 
 class GroupTools {
 	protected $table = "groups";
@@ -44,6 +50,12 @@ class GroupTools {
 		$db = new DB();
 		$result = $db->select('groups',"id='$id'");
 		return new Group($result);
+	}
+
+	public function get_raw($id){
+		$db = new DB();
+		$result = $db->select('groups',"id=$id");
+		return $result;
 	}
 
 	public function delete_group($id){

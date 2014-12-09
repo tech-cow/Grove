@@ -1,6 +1,6 @@
 <?php
 
-require_once '../../php/classes/db/DB.class.php';
+//require_once '../../php/classes/db/DB.class.php';
 
 class User{
 	public $id;

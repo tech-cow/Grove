@@ -1,25 +1,10 @@
-	<?php
-
-require_once '../../php/include/global.inc.php';
-session_start();
-
-//test value, remove for production
-$_SESSION['groupID'] = 1;
-
-echo $_SESSION['groupID'];
-//$groupTools = new GroupTools();
-
-//$currentGroup = $groupTools->get($_SESSION['groupID']);
-//$_COOKIE['group'] = json_encode($currentGroup);
-?>
-
+<?php session_start(); ?>
 <!DOCTYPE html>
-
 <html>
-
 	<head>
-		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 		<meta content="utf-8" http-equiv="encoding">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		
 
 		<link rel="stylesheet" href="../../css/groupview/studygroup_style.css"/>
 		<link rel="stylesheet" href="../../css/bootstrap/bootstrap.css"/>
@@ -45,6 +30,21 @@ echo $_SESSION['groupID'];
                 Search
             </div>
         </div-->
+        <?php
+        
+		require_once '../../php/include/global.inc.php';
+		//require_once '/php/include/global.inc.php';
+
+		//test value, remove for production
+		$_SESSION['groupID'] = 1;
+
+		//echo $_SESSION['groupID'];
+		//$groupTools = new GroupTools();
+
+		//$currentGroup = $groupTools->get($_SESSION['groupID']);
+		//$_COOKIE['group'] = json_encode($currentGroup);
+
+		?>
         
 		<div id="groupMembers">
 			<div class="groupmemberContainer">
