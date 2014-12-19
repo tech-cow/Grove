@@ -1,8 +1,7 @@
-CSCI-3308
+CSCI-3308 Final Project.
 =============
 
 Grove - A study buddy matching and organization webapp
-=======================================================
 
 signup_doc and getgroup_doc html files are doxygen-generated documentation
 
