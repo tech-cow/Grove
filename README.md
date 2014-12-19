@@ -1,4 +1,6 @@
 Team_COOLGUYS
+CSCI-3308
+Final Project
 =============
 
 Grove - A study buddy matching and organization webapp
